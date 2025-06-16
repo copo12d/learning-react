@@ -1,2 +1,10 @@
-# learning-react
-This repository contains my first React project as I learn the fundamentals of React.js. It includes basic components, state management, props, and JSX, with plans to explore hooks, context API, and more. This project serves as a hands-on learning experience to build interactive web applications using Reat.
+# Curso de React desde cero - midudev 
+Curso para apreder [React](https://www.youtube.com/watch?v=qkzcjwnueLA&list=PLUofhDIg_38q4D0xNWp7FEHOTcZhjWJ29&index=2) gratis de midudev 
+
+# Lecciones
+
+| # | Descripción  | Demo |
+|--------------|--------------|--------------|
+| 1  | Aprende desde cero | [Demo](https://primera-clase-react.netlify.app/) |
+| 2  | useState & useEffect    | [Demo]()     |
+
