@@ -8,14 +8,23 @@ import "./App.css";
 import "./index.css";
 
 function App() {
-  const [board, setBoard] = useState(Array(9).fill(null));
-  const [turn, setTurn] = useState(turns.X);
+  const [board, setBoard] = useState(() => {
+    const saved = window.localStorage.getItem("board");
+    return saved ? JSON.parse(saved) : Array(9).fill(null);
+  });
+  const [turn, setTurn] = useState(() => {
+    const saved = window.localStorage.getItem("turn");
+    return saved ?? turns.X;
+  });
   const [winner, setWinner] = useState(null);
 
   const resetGame = () => {
     setBoard(Array(9).fill(null));
     setTurn(turns.X);
     setWinner(null);
+
+    window.localStorage.removeItem("board");
+    window.localStorage.removeItem("turn");
   };
 
   const updateBoard = (index) => {
@@ -27,6 +36,8 @@ function App() {
     setBoard(newBoard);
     const newTurn = turn === turns.X ? turns.O : turns.X;
     setTurn(newTurn);
+    window.localStorage.setItem("board", JSON.stringify(newBoard));
+    window.localStorage.setItem("turn", newTurn);
     const newWinner = checkWinner(newBoard);
     if (newWinner) {
       confetti();
