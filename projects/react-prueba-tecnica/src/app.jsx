@@ -33,10 +33,10 @@ export function App() {
     
     return (
         <main>
-            <h1>APP de gatos</h1>
+            <h1 className="titulo">APP de gatos</h1>
             <section>
-            {fact  && <p>{fact}</p>}
-            {imgUrl &&<img src={imgUrl} alt={`image stracted suing the three first letters of the fact ${fact}`} />}
+                {fact  && <p className="fact">{fact}</p>}
+                {imgUrl &&<img src={imgUrl} alt={`image stracted suing the three first letters of the fact ${fact}`} />}
             </section>
 
         </main>

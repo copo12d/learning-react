@@ -13,10 +13,22 @@ section {
   display: flex;
   justify-content: space-around;
   justify-items: center;
-  gap: 10px;
+  gap: 15px;
+  border: 3px black solid;
+  border-radius: 4px;
+  padding: 20px;
 }
 
 section img {
   max-width: 300px;
   height: auto;
+}
+body {
+  background-color: #3b3b3b;
+}
+.titulo {
+  color: #fff;
+}
+.fact {
+  color: #fff;
 }
